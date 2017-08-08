@@ -711,8 +711,26 @@ public class CardStackView extends ViewGroup implements ScrollDelegate {
     public static abstract class ViewHolder {
 
         public View itemView;
+
+        public int getItemViewType() {
+            return mItemViewType;
+        }
+
+        public void setItemViewType(int mItemViewType) {
+            this.mItemViewType = mItemViewType;
+        }
+
         int mItemViewType = INVALID_TYPE;
-        int position;
+
+        public int getPosition() {
+            return position;
+        }
+
+        public void setPosition(int position) {
+            this.position = position;
+        }
+
+        private int position;
 
         public ViewHolder(View view) {
             itemView = view;

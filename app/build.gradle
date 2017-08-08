@@ -14,16 +14,16 @@ android {
 
     signingConfigs {
         release {
-            Properties properties = new Properties()
-
-            FileInputStream fis = new FileInputStream("$project.rootDir/keystore.properties")
-            properties.load(fis)
-            fis.close()
-
-            keyAlias = properties.keyAlias
-            storeFile = file(properties.storeFile)
-            storePassword = properties.storePassword
-            keyPassword = properties.keyPassword
+//            Properties properties = new Properties()
+//
+//            FileInputStream fis = new FileInputStream("$project.rootDir/keystore.properties")
+//            properties.load(fis)
+//            fis.close()
+//
+//            keyAlias = properties.keyAlias
+//            storeFile = file(properties.storeFile)
+//            storePassword = properties.storePassword
+//            keyPassword = properties.keyPassword
         }
     }
 
