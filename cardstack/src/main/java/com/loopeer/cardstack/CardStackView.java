@@ -712,6 +712,8 @@ public class CardStackView extends ViewGroup implements ScrollDelegate {
 
         public View itemView;
 
+        private boolean isItemExpanded;
+
         public int getItemViewType() {
             return mItemViewType;
         }
@@ -740,10 +742,20 @@ public class CardStackView extends ViewGroup implements ScrollDelegate {
             return itemView.getContext();
         }
 
-        public abstract void onItemExpand(boolean b);
+        public void onItemExpand(boolean b) {
+            this.isItemExpanded = b;
+        }
 
         protected void onAnimationStateChange(int state, boolean willBeSelect) {
 
+        }
+
+        public boolean isItemExpanded() {
+            return isItemExpanded;
+        }
+
+        public void setItemExpanded(boolean itemExpanded) {
+            isItemExpanded = itemExpanded;
         }
     }
 
