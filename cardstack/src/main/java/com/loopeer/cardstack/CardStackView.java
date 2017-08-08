@@ -235,7 +235,7 @@ public class CardStackView extends ViewGroup implements ScrollDelegate {
         for (int i = 0; i < mStackAdapter.getItemCount(); i++) {
             ViewHolder holder = getViewHolder(i);
             holder.position = i;
-            holder.onItemExpand(i == mSelectPosition);
+//            holder.onItemExpand(i == mSelectPosition);
             addView(holder.itemView);
             setClickAnimator(holder, i);
             mStackAdapter.bindViewHolder(holder, i);
